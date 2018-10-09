@@ -52,17 +52,16 @@ public class Application {
 	 *         the PID is returned
 	 */
 	public static int allocate_pid() {
-		int pid_no = -1;
+		
 		// allocate the "first" available PID
 		for (int i : pidStruct.keySet()) {
 			if (pidStruct.get(i) == 0) {
 				pidStruct.put(i, 1);
-				pid_no = i;
-				break;
+				return i;
 			}
 		}
 
-		return pid_no;
+		return -1;
 	}
 
 	/**
