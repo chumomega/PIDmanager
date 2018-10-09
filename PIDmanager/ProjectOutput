@@ -1,0 +1,5 @@
+Output:
+
+The structure to contain the PID number has been created
+Allocating 3 PID numbers... They are 300, 301, 302
+Releasing the PID numbers 300, 301, 302....done

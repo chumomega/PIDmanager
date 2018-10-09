@@ -1,0 +1,9 @@
+Authors: Adebowale Ojetola, Chuma Okoro.
+
+The problem statement was to create a manger for PIDs by implementing three functions 
+that keeps track of unique PID numbers between the range 300 and 5000. 
+The manager can also release a PID that has already been created.
+
+Assumptions:
+In order to make sure the data structure created in allocate_map is not limited in scope 
+we assumed that the date structure had been declared earlier in the program.

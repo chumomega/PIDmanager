@@ -1,0 +1,7 @@
+Design:
+
+int allocate_map(void) – Creates and initializes a data structure for representing pids; returns -1 if unsuccessful and 1 if successful 
+
+int allocate_pid(void) – Allocates and returns a pid; returns -1 if if unable to allocate a pid (all pids are in use) 
+
+void release_pid(int_pid) – Releases a pid. 
