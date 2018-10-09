@@ -1,15 +1,16 @@
-import java.util.HashSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Application {
 	// Data structure to keep track of the PIDs in use
-	public static HashSet<Integer> pidStruct;
+	public static Map<Integer, Integer> pidStruct;
 
 	// Range of the PIDs
 	final static private int MIN_PID = 300;
 	final static private int MAX_PID = 5000;
 
 	public static void main(String[] args) {
-		//Test the functions
+		// Test the functions
 		allocate_map();
 		if (allocate_map() == 1) {
 			System.out.println("The structure to contain the PID number has been created");
@@ -32,8 +33,12 @@ public class Application {
 	 * @return -1 if unsuccessful and 1 if successful
 	 */
 	public static int allocate_map() {
-		pidStruct = new HashSet<Integer>();
+		pidStruct = new HashMap<Integer, Integer>();
 
+		// add the numbers within the range of MAX and MIN PIDs with default value 0
+		for (int i = MIN_PID; i <= MAX_PID; i++) {
+			pidStruct.put(i, 0);
+		}
 		if (pidStruct == null)
 			return -1;
 		return 1;
@@ -47,13 +52,15 @@ public class Application {
 	 *         the PID is returned
 	 */
 	public static int allocate_pid() {
-		int pid_no = MIN_PID + pidStruct.size();
-
-		if (pid_no < MIN_PID || pid_no > MAX_PID) {
-			return -1;
+		int pid_no = -1;
+		// allocate the "first" available PID
+		for (int i : pidStruct.keySet()) {
+			if (pidStruct.get(i) == 0) {
+				pidStruct.put(i, 1);
+				pid_no = i;
+				break;
+			}
 		}
-
-		pidStruct.add(pid_no);
 
 		return pid_no;
 	}
@@ -65,7 +72,7 @@ public class Application {
 	 */
 	public static void release_pid(int pid) {
 
-		if (pidStruct.contains(pid)) {
+		if (pidStruct.containsKey(pid)) {
 			pidStruct.remove(pid);
 		}
 
