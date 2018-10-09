@@ -1,47 +1,42 @@
+import java.util.HashSet;
 
 public class Application {
-	public static int[] pidStruct;
-	final private int MIN_PID = 300;
+	public static HashSet<Integer> pidStruct;
+	final private static int MIN_PID = 300;
 	final private int MAX_PID = 5000;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
+
+		allocate_map();
 
 	}
-	
+
 	public static int allocate_map() {
-		pidStruct = new int[4700];
+		pidStruct = new HashSet<Integer>();
+
+		if (pidStruct == null)
+			return -1;
+		return 1;
+
+	}
+
+	public int allocate_pid() {
+		int pid_no = MIN_PID + pidStruct.size();
 		
-		if(pidStruct==null) {
+		if (pid_no < MIN_PID || pid_no > MAX_PID) {
 			return -1;
 		}
-		else {
-			return 1;
-		}
+		pidStruct.add(pid_no);
+		return 1;
 	}
-	
-	
-	public int allocate_pid() {
-		for(int i=0; i<pidStruct.length; i++) {
-			if(pidStruct[i]==0) {
-				pidStruct[i]=1;
-				return i+300;
-			}
-		}
-		return -1;
-	}
-	
-	
+
 	public void release_pid(int pid) {
-		if(pid<this.MIN_PID || pid>this.MAX_PID) {
-			return;
-		}
-		else {
-			pidStruct[pid-this.MIN_PID]=0;
-		}
 		
+		if (pidStruct.contains(pid)) {
+			pidStruct.remove(pid);
+		}
+
 	}
 
 }
