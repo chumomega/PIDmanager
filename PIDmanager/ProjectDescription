@@ -6,4 +6,4 @@ The manager can also release a PID that has already been created.
 
 Assumptions:
 In order to make sure the data structure created in allocate_map is not limited in scope 
-we assumed that the date structure had been declared earlier in the program.
+we assumed that the data structure had been declared earlier in the program.
