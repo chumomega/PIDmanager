@@ -1,5 +1,33 @@
 Output:
 
 The structure to contain the PID number has been created
-Allocating 3 PID numbers... They are 300, 301, 302
-Releasing the PID numbers 300, 301, 302....done
+Allocated pid: 300
+Allocated pid: 300
+Allocated pid: 300
+Allocated pid: 302
+Allocated pid: 300
+Allocated pid: 301
+Allocated pid: 305
+Allocated pid: 304
+Allocated pid: 303
+Allocated pid: 306
+Thread sleeping for 6 seconds
+Thread sleeping for 1 seconds
+Thread sleeping for 5 seconds
+Thread sleeping for 9 seconds
+Thread sleeping for 9 seconds
+Thread sleeping for 2 seconds
+Thread sleeping for 4 seconds
+Thread sleeping for 3 seconds
+Thread sleeping for 4 seconds
+Thread sleeping for 7 seconds
+Releasing PID 305
+Releasing PID 300
+Releasing PID 302
+Releasing PID 300
+Releasing PID 300
+Releasing PID 304
+Releasing PID 300
+Releasing PID 301
+Releasing PID 303
+Releasing PID 306

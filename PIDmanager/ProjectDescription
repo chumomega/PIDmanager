@@ -1,5 +1,18 @@
 Authors: Adebowale Ojetola, Chuma Okoro.
 
+The problem Statement was to create several threads – for example, 100 – and such that
+each thread requests a pid, sleeps for a random period of time, and then releases
+the pid.
+
+
+Assumptions:
+In order to
+
+
+
+
+
+#hw1 
 The problem statement was to create a manger for PIDs by implementing three functions 
 that keeps track of unique PID numbers between the range 300 and 5000. 
 The manager can also release a PID that has already been created.

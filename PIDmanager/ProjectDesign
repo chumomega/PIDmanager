@@ -1,7 +1,21 @@
 Design:
 
-int allocate_map(void) – Creates and initializes a data structure for representing pids; returns -1 if unsuccessful and 1 if successful 
+3 main classes
+1. Application - This is the PIDManager application
+	- int allocate_map(void) ï¿½ Creates and initializes a data structure for representing pids; returns -1 if unsuccessful and 1 if successful 
+	- int allocate_pid(void) ï¿½ Allocates and returns a pid; returns -1 if if unable to allocate a pid (all pids are in use) 
+	- void release_pid(int_pid) ï¿½ Releases a pid. 
+	
+2. PIDThread - This creates a thread of the PIDManager application. Each thread will request a pid, sleep for a random period of time, 
+	and then release the pid.
+	- PIDThread(Application app) ï¿½ creates a thread from the application
+	- void run() ï¿½ Runs the thread by printing a statement when the thread gets an allocated pid, sleeps, and gets releases.
+	
+3. Test - This tests the PIDThread application
+	- void main() ï¿½ Tests the program
 
-int allocate_pid(void) – Allocates and returns a pid; returns -1 if if unable to allocate a pid (all pids are in use) 
 
-void release_pid(int_pid) – Releases a pid. 
+
+
+
+
