@@ -2,17 +2,16 @@ Design:
 
 3 main classes
 1. Application - This is the PIDManager application
-	- int allocate_map(void) � Creates and initializes a data structure for representing pids; returns -1 if unsuccessful and 1 if successful 
-	- int allocate_pid(void) � Allocates and returns a pid; returns -1 if if unable to allocate a pid (all pids are in use) 
-	- void release_pid(int_pid) � Releases a pid. 
+	- int allocate_map(void) Creates and initializes a data structure for representing pids; returns -1 if unsuccessful and 1 if successful 
+	- int allocate_pid(void) Allocates and returns a pid; returns -1 if if unable to allocate a pid (all pids are in use) 
+	- void release_pid(int_pid) Releases a pid. 
 	
 2. PIDThread - This creates a thread of the PIDManager application. Each thread will request a pid, sleep for a random period of time, 
-	and then release the pid.
-	- PIDThread(Application app) � creates a thread from the application
-	- void run() � Runs the thread by printing a statement when the thread gets an allocated pid, sleeps, and gets releases.
+	and then release the pid. Also uses Mutex Locks
+	- void run() Runs the thread by printing a statement when the thread gets an allocated pid, sleeps, and gets releases.
 	
 3. Test - This tests the PIDThread application
-	- void main() � Tests the program
+	- void main() Creates the threads and Tests the program
 
 
 

@@ -1,33 +1,50 @@
 Output:
-
 The structure to contain the PID number has been created
 Allocated pid: 300
-Allocated pid: 300
-Allocated pid: 300
-Allocated pid: 302
-Allocated pid: 300
+Thread 300 sleeping for 3 seconds
+Releasing PID 300
 Allocated pid: 301
-Allocated pid: 305
-Allocated pid: 304
-Allocated pid: 303
-Allocated pid: 306
-Thread sleeping for 6 seconds
-Thread sleeping for 1 seconds
-Thread sleeping for 5 seconds
-Thread sleeping for 9 seconds
-Thread sleeping for 9 seconds
-Thread sleeping for 2 seconds
-Thread sleeping for 4 seconds
-Thread sleeping for 3 seconds
-Thread sleeping for 4 seconds
-Thread sleeping for 7 seconds
-Releasing PID 305
-Releasing PID 300
-Releasing PID 302
-Releasing PID 300
-Releasing PID 300
-Releasing PID 304
-Releasing PID 300
+Thread 301 sleeping for 5 seconds
 Releasing PID 301
+Allocated pid: 302
+Thread 302 sleeping for 4 seconds
+Releasing PID 302
+Allocated pid: 303
+Thread 303 sleeping for 5 seconds
 Releasing PID 303
+Allocated pid: 304
+Thread 304 sleeping for 4 seconds
+Releasing PID 304
+Allocated pid: 305
+Thread 305 sleeping for 6 seconds
+Releasing PID 305
+Allocated pid: 306
+Thread 306 sleeping for 4 seconds
 Releasing PID 306
+Allocated pid: 307
+Thread 307 sleeping for 5 seconds
+Releasing PID 307
+Allocated pid: 308
+Thread 308 sleeping for 8 seconds
+Releasing PID 308
+Allocated pid: 309
+Thread 309 sleeping for 4 seconds
+Releasing PID 309
+Allocated pid: 310
+Thread 310 sleeping for 8 seconds
+Releasing PID 310
+Allocated pid: 311
+Thread 311 sleeping for 9 seconds
+Releasing PID 311
+Allocated pid: 312
+Thread 312 sleeping for 3 seconds
+Releasing PID 312
+Allocated pid: 313
+Thread 313 sleeping for 1 seconds
+Releasing PID 313
+Allocated pid: 314
+Thread 314 sleeping for 8 seconds
+Releasing PID 314
+Allocated pid: 315
+Thread 315 sleeping for 3 seconds
+Releasing PID 315

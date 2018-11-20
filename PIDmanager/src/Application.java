@@ -8,8 +8,8 @@ public class Application {
 	public static Map<Integer, Integer> pidStruct;
 
 	// Range of the PIDs
-	final static private int MIN_PID = 300;
-	final static private int MAX_PID = 5000;
+	final static int MIN_PID = 300;
+	final static int MAX_PID = 5000;
 
 	public Application() {
 		if (allocate_map() == 1) {
